@@ -19,6 +19,7 @@ def get_console() -> Console:
     CONSOLE = Console(
         color_system="truecolor", file=NullWriter(), width=78, record=True
     )
+    return CONSOLE
 
 
 def rich_print(*args, **kwargs):
