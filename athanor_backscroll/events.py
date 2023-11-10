@@ -31,6 +31,10 @@ def rich_print(*args, **kwargs):
 
 
 def character_at_post_msg_receive(sender, **kwargs):
+    if not (
+        account := sender.attributes.get("account", category="system", default=None)
+    ):
+        return
     if options := kwargs.get("options", dict()):
         if options.get("no_backscroll", False):
             return
