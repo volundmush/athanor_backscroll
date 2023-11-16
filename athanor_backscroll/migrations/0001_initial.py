@@ -7,7 +7,9 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
     initial = True
 
-    dependencies = []
+    dependencies = [
+        ("objects", "0013_defaultobject_alter_objectdb_id_defaultcharacter_and_more"),
+    ]
 
     operations = [
         migrations.CreateModel(
